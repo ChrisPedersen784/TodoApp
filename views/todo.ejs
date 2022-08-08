@@ -1,0 +1,29 @@
+<%- include("partials/header"); -%>
+
+
+
+
+
+  <div class="card" style="width: 28rem;">
+    <img src="/images/to-do-list.png" class="card-img-top" alt="...">
+    <div class="card-body">
+
+      <h5 class="card-title">Todo</h5>
+      <p class="card-text">Add your todo list for today.</p>
+    </div>
+      <% newListItems.forEach(function(item){ %>
+    <div class="item">
+        <p> <%= item.content %> </p>
+    </div>
+
+
+
+<% }); %>
+
+<form class="item" action="/" method="post">
+  <input type="text" name="newinput" placeholder="New Item" autocomplete="off">
+  <button class="btn btn-primary" type="submit" name="button">Add</button>
+</form>
+  </div>
+
+<%- include("partials/footer"); -%>
